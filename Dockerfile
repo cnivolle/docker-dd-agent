@@ -32,7 +32,7 @@ COPY conf.d/docker.yaml /etc/dd-agent/conf.d/docker.yaml
 COPY entrypoint.sh /entrypoint.sh
 
 # Expose DogStatsD port
-EXPOSE 8125/udp
+EXPOSE 8080
 
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["supervisord", "-n", "-c", "/etc/dd-agent/supervisor.conf"]
